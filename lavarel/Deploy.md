@@ -10,16 +10,29 @@ public function boot()
 
 
 
-`chmod -R 777 public`
-`chmod -R 777 public/index.php`
+`chmod -R 775 public`
+
+`chmod -R 775 public/index.php`
+
 `chown -R www-data:www-data bootstrap`
+
 `chown -R www-data:www-data bootstrap/cache`
+
 `chown -R www-data:www-data storage/logs`
+
 `chown -R www-data:www-data storage/framework`
+
 `sudo chown -R www-data:www-data storage/logs/laravel.log`
 
 
 
 Vite build
 `npm install`
+
 `npm run build`
+
+
+## Note
+
+build vite before and chown public
+

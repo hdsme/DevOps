@@ -5,7 +5,7 @@ mysql -u root -p
 create database database_name
 
 # Granted permissions for user to database
-GRANT ALL PRIVILEGES ON dev_convert_sdx.* TO 'mysql'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON sw_wp_home.* TO 'mysql'@'localhost' WITH GRANT OPTION;
 
 # Granted permissions for user
 GRANT ALL PRIVILEGES ON *.* TO 'mysql'@'localhost' WITH GRANT OPTION;

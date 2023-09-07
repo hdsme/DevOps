@@ -24,6 +24,8 @@ public function boot()
 
 `sudo chown -R www-data:www-data storage/logs/laravel.log`
 
+`sudo chown -R $USER:www-data storage`
+
 
 
 Vite build

@@ -21,7 +21,9 @@ services:
       - 8000:80
     volumes:
       - ./:/var/www
-      - ./nginx/conf.d:/etc/nginx/conf.d/
+      # - ./nginx/conf.d:/etc/nginx/conf.d/
+    command: >
+      sh -c "curl -o /etc/nginx/conf.d/default.conf https://raw.githubusercontent.com/haohoangofficial/DevOps/main/docker/laravel/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
     networks:
       - laravel
 

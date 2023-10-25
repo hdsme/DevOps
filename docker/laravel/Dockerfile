@@ -29,8 +29,7 @@ RUN chmod 775 -R /var/www/storage && \
     # chown -R $user:$user /home/$user &&\
     chown -R www-data:www-data /var/www/storage && \
     chown -R www-data:www-data /var/www/storage/logs && \
-    chown -R www-data:www-data /var/www/bootstrap/cache && \
-    chown -R www-data:www-data /var/www/storage/logs/laravel-2023-08-14.log
+    chown -R www-data:www-data /var/www/bootstrap/cache
 
 # Set working directory
 WORKDIR /var/www

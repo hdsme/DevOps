@@ -20,3 +20,7 @@ create extension unaccent
 ## Granted read access
 GRANT SELECT ON ALL TABLES IN SCHEMA public TO read_user;
 GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA public TO read_user;
+
+## Disable remotely
+Listening set '*'
+and 0.0.0.0/0

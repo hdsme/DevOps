@@ -6,8 +6,9 @@ psql -h localhost -p 5432 -U postgres
 
 # restore
 
-p0stgr3s
+psql -h localhost -p 5432 -U postgres -f filename.sql -d database_name
 
+pg_restore -h localhost -p 5432 -U postgres -d database_name filename.sql
 
 ## unaccent extension
 

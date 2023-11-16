@@ -4,6 +4,11 @@ abort() {
 }
 
 check_depend() {
+    if command -v psql &> /dev/null; then
+        echo "PostgreSQL (psql) is installed."
+    else
+        echo "PostgreSQL (psql) is not installed."
+    fi
 
 }
 

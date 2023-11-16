@@ -40,3 +40,5 @@ mysql -u root -p mydatabase < backup.sql
 #### communications link failure the last packet sent successfully to the server was 0 milliseconds ago. the driver has not received any packets from the server. connection refused: no further information connection refused: no further information mysql
 
 `blind-address to 0.0.0.0 in mysqld.cnf`
+
+use --force for skip errors

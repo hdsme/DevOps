@@ -3,7 +3,7 @@ abort() {
   exit 1
 }
 
-read -p "Enter your "$USER" password: " password
+read -d "Enter your "$USER" password: " password
 
 echo $password | sudo -S apt -y update || abort "Failed"
 
@@ -19,13 +19,12 @@ echo $password | sudo -S apt-cache policy docker-ce || abort "Failed"
 
 echo $password | sudo -S apt install docker-ce || abort "Failed"
 
+echo $password | sudo -S usermod -aG docker ${USER} || abort "Failed"
+
+sudo -S su - ${USER} || abort "Failed"
+
+id -nG || abort "Failed"
+
+echo $password | sudo -S usermod -aG docker ${USER} || abort "Failed"
+
 echo $password | sudo -S systemctl status docker || abort "Failed"
-
-echo $password | sudo -S usermod -aG docker ${USER} || abort "Failed"
-
-echo $password | sudo -S su - ${USER} || abort "Failed"
-
-echo $password | sudo -S id -nG || abort "Failed"
-
-echo $password | sudo -S usermod -aG docker ${USER} || abort "Failed"
-

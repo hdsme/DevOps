@@ -39,10 +39,10 @@ check_depend() {
 }
 
 install_ssl() {
-    read -p "Enter your domain to install ssl: $domain"
+    read -p "Enter your domain to install ssl: " domain
     current_server=$(check_server)
     echo "Current server: $current_server"
-    read -p "Enter your server name to install ssl ([A]pache / [N]ginx): $server"
+    read -p "Enter your server name to install ssl ([A]pache / [N]ginx): " server
 
     if [ -z "$server" ]; then
         server="$current_server"

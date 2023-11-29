@@ -38,6 +38,8 @@ Vite build
 
 build vite before and chown public
 
-#SSL Error
+# SSL Error
 - This site can’t provide a secure domain sent an invalid response., Try running Windows Network Diagnostics., ERR_SSL_PROTOCOL_ERROR
 Try to use http instead of https, set .env into development, nginx configuration only port 80, and finally install SSL certbot
+# Deploy laravel in subpath if not connect assets path
+'mix_url' => env('APP_URL', 'http://localhost'), -> config/app.php

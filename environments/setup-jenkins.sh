@@ -3,9 +3,9 @@ abort() {
   exit 1
 }
 
-curl -fsSL https://raw.githubusercontent.com/hdsme/DevOps/main/jenkins/Dockerfile
-curl -fsSL https://raw.githubusercontent.com/hdsme/DevOps/main/jenkins/docker-compose.yml
-curl -fsSL https://raw.githubusercontent.com/hdsme/DevOps/main/jenkins/.env
+curl -fsSL https://raw.githubusercontent.com/hdsme/DevOps/main/jenkins/Dockerfile -O
+curl -fsSL https://raw.githubusercontent.com/hdsme/DevOps/main/jenkins/docker-compose.yml -O
+curl -fsSL https://raw.githubusercontent.com/hdsme/DevOps/main/jenkins/.env -O
 
 docker compose up -d || abort "Failed to start Jenkins"
 

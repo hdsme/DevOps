@@ -3,8 +3,7 @@ abort() {
   exit 1
 }
 
-
-apt-get install nginx || abort "Install nginx failed"
+apt-get -y install nginx || abort "Install nginx failed"
 
 echo "Setup Nginx successfully"
 nginx -v

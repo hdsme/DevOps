@@ -22,5 +22,7 @@ GRANT SELECT ON ALL TABLES IN SCHEMA public TO read_user;
 GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA public TO read_user;
 
 ## Disable remotely
+/etc/postgresql/14/main/postgresql.conf
 Listening set '*'
+/etc/postgresql/14/main/pg_hba.conf
 and 0.0.0.0/0
